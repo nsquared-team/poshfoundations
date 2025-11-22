@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Unit 2: Landmarks and page structure - POSH Foundations Workshop Materials</title>
+    <meta name="description" content="Workshop materials for the POSH foundations workshop for learning semantic HTML">
+
+    <link rel="stylesheet" href="css/pico.css">
+    <link id="color" rel="stylesheet" href="css/amber.css">
+    <link rel="stylesheet" href="css/pico.posh.css">
+    <link id="syntax" rel="stylesheet" href="css/prism.css">
+  </head>
+
+  <body class="line-numbers">
+    <a href="#content" class="skip-to-content contrast button">Skip to content</a>
+    <!-- Header -->
+    <header>
+      <div class="container grid">
+        <div>
+          <p class="site-title"><a href="index.html">POSH Foundations</a></p>
+          <p>Building accessible interfaces with semantic HTML</p>
+        </div>
+        <div class="theme-selector">
+          Theme selector
+          <div role="group">
+            <button type="button" class="outline" data-theme-switcher="auto">
+              Auto
+            </button>
+            <button type="button" class="outline" data-theme-switcher="light">
+              Light
+            </button>
+            <button type="button" class="outline" data-theme-switcher="dark">
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container color-selector">
+        <div role="group">
+          <button type="button" class="pico-background-red" data-color-switcher="red"><span class="visually-hidden">Red</span></button>
+          <button type="button" class="pico-background-pink" data-color-switcher="pink"><span class="visually-hidden">Pink</span></button>
+          <button type="button" class="pico-background-fuchsia" data-color-switcher="fuchsia"><span class="visually-hidden">Fuchsia</span></button>
+          <button type="button" class="pico-background-purple" data-color-switcher="purple"><span class="visually-hidden">Purple</span></button>
+          <button type="button" class="pico-background-violet" data-color-switcher="violet"><span class="visually-hidden">Violet</span></button>
+          <button type="button" class="pico-background-indigo" data-color-switcher="indigo"><span class="visually-hidden">Indigo</span></button>
+          <button type="button" class="pico-background-blue" data-color-switcher="blue"><span class="visually-hidden">Blue</span></button>
+          <button type="button" class="pico-background-azure" data-color-switcher="azure"><span class="visually-hidden">Azure</span></button>
+          <button type="button" class="pico-background-cyan" data-color-switcher="cyan"><span class="visually-hidden">Cyan</span></button>
+          <button type="button" class="pico-background-jade" data-color-switcher="jade"><span class="visually-hidden">Jade</span></button>
+          <button type="button" class="pico-background-green" data-color-switcher="green"><span class="visually-hidden">Green</span></button>
+          <button type="button" class="pico-background-lime" data-color-switcher="lime"><span class="visually-hidden">Lime</span></button>
+          <button type="button" class="pico-background-yellow" data-color-switcher="yellow"><span class="visually-hidden">Yellow</span></button>
+          <button type="button" class="pico-background-amber" data-color-switcher="amber"><span class="visually-hidden">Amber</span></button>
+          <button type="button" class="pico-background-pumpkin" data-color-switcher="pumpkin"><span class="visually-hidden">Pumpkin</span></button>
+          <button type="button" class="pico-background-orange" data-color-switcher="orange"><span class="visually-hidden">Orange</span></button>
+          <button type="button" class="pico-background-sand" data-color-switcher="sand"><span class="visually-hidden">Sand</span></button>
+          <button type="button" class="pico-background-grey" data-color-switcher="grey"><span class="visually-hidden">Grey</span></button>
+          <button type="button" class="pico-background-zinc" data-color-switcher="zinc"><span class="visually-hidden">Zinc</span></button>
+          <button type="button" class="pico-background-slate" data-color-switcher="slate"><span class="visually-hidden">Slate</span></button>
+        </div>
+      </div>
+      <div class="container">
+        <button type="button" aria-expanded="true" aria-controls="side-menu" id="menu-toggle">Hide menu</button>
+      </div>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <div class="container flex">
+      <nav class="menu" id="side-menu" aria-hidden="false">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="intro.html">Introduction</a>
+          </li>
+          <li>
+            <a href="unit1.html">Unit 1: Why HTML still matters</a>
+          </li>
+          <li>
+            <a href="unit2.html" aria-current="page">Unit 2: Landmarks and page structure</a>
+          </li>
+          <li>
+            <a href="unit3.html">Unit 3: Lists, tables, and relationships</a>
+          </li>
+          <li>
+            <a href="unit4.html">Unit 4: Links, buttons, and forms</a>
+          </li>
+          <li>
+            <a href="unit5.html">Unit 5: Semantic HTML elements you may not know</a>
+          </li>
+          <li>
+            <a href="unit6.html">Unit 6: POSH in modern frameworks</a>
+          </li>
+          <li>
+            <a href="conclusion.html">Conclusion</a>
+          </li>
+          <li>
+            <a href="bonus.html">Bonus: POSH as a team practice</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="content" tabindex="-1">
+        <!-- Unit 1 -->
+        <section id="unit-2">
+          <h1>Unit 2: Landmarks and structures</h1>
+
+          <article>
+            <h2>Pages need structure</h2>
+            <p>Without structure, you just have tag soup.</p>
+            <p>Structure helps users, screen readers, search engines, and you.</p>
+            <p>HTML is a hierarchy, not just a bunch of tags.</p>
+          </article>
+
+          <article>
+            <h2>Landmarks</h2>
+            <p>Define sections of the page.</p>
+            <p>Landmark regions group related content.</p>
+          </article>
+
+          <article>
+            <h2>The structure matters</h2>
+            <p>Screen readers allow jumping by region, but only if these regions exist.</p>
+            <p>Accessible names are important for these sections so users can understand what they are.</p>
+          </article>
+
+          <article>
+            <h2>Header element or banner role</h2>
+            <pre class="language-html"><code><!--
+              <header></header>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <div role="banner"></div>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <header role="banner"></header>
+            --></code></pre>
+
+            <p>Usually a header for the entire page, but can also be a header for a section or article.</p>
+          </article>
+
+          <article>
+            <h2>Nav element or navigation role</h2>
+            <pre class="language-html"><code><!--
+              <nav></nav>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <div role="navigation"></div>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <nav role="navigation"></nav>
+            --></code></pre>
+
+            <p>Site or section navigation. Usually contains a list of links.</p>
+            <p>If there are more than one, be sure to assign accessible names.</p>
+          </article>
+
+          <article>
+            <h2>Accessible names for landmark regions</h2>
+            <p>Use accessible names to distinguish multiple regions of the same type.</p>
+            <pre class="language-html"><code><!--
+              <nav aria-label="Pagination">
+                ...
+              </nav>
+
+              <nav aria-labelledby="table-of-contents">
+                <h2 id="table-of-contents">Table of Contents</h2>
+                ...
+              </nav>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Main element or main role</h2>
+            <pre class="language-html"><code><!--
+              <main></main>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <div role="main"></div>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <main role="main"></main>
+            --></code></pre>
+
+            <p>The core content of the page.</p>
+          </article>
+
+          <article>
+            <h2>Aside element or complementary role</h2>
+            <pre class="language-html"><code><!--
+              <aside></aside>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <div role="complementary"></div>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <aside role="complementary"></aside>
+            --></code></pre>
+
+            <p>Tangential content, callouts, ads, search, etc.</p>
+          </article>
+
+          <article>
+            <h2>Footer element or contentinfo role</h2>
+            <pre class="language-html"><code><!--
+              <footer></footer>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <div role="contentinfo"></div>
+            --></code></pre>
+            <p>or</p>
+            <pre class="language-html"><code><!--
+              <footer role="contentinfo"></footer>
+            --></code></pre>
+
+            <p>Usually the footer for the entire page, but can also be a footer for a section or article.</p>
+          </article>
+
+          <article>
+            <h2>How they define the structure of the page</h2>
+            <div class="container">
+              <pre class="language-html"><code><!--
+                <header role="banner"></header>
+              --></code></pre>
+            </div>
+            <div class="container">
+              <pre class="language-html"><code><!--
+                <nav role="navigation"></nav>
+              --></code></pre>
+            </div>
+            <div class="container grid">
+              <div>
+                <pre class="language-html"><code><!--
+                  <main role="main"></main>
+                --></code></pre>
+              </div>
+              <div>
+                <pre class="language-html"><code><!--
+                  <aside role="complementary"></aside>
+                --></code></pre>
+              </div>
+            </div>
+            <div class="container">
+              <pre class="language-html"><code><!--
+                <footer role="contentinfo"></footer>
+              --></code></pre>
+            </div>
+            <p>These elements are not for styling - they are for imparting meaning to different bits of content.</p>
+            <p>All of the content on the page should be inside one of these containers.</p>
+            <p><code>nav</code> can be inside the header, footer, aside, etc. But the others should be at the top level of the document and not nested inside one another.</p>
+          </article>
+
+          <article>
+            <h2>Section and article</h2>
+            <p>Independent content blocks.</p>
+            <pre class="language-html"><code><!--
+              <section></section>
+              <article></article>
+            --></code></pre>
+            <p><code>section</code> is a meaningful group of content, e.g. the hero section.</p>
+            <p><code>article</code> is a complete composition contained in the document, e.g. a blog post.</p>
+          </article>
+
+          <article>
+            <h2>Sections and articles can have their own internal structure</h2>
+            <p>Can be helpful for organizing content like:</p>
+            <ul>
+              <li>Headlines and subheadlines for that particular bit of content.</li>
+              <li>Bylines, dates, and other metadata.</li>
+              <li>Section or article specific navigation or summaries.</li>
+            </ul>
+            <pre class="language-html"><code><!--
+              <article>
+                <header>
+                  <h2>New Feature: Dark Mode</h2>
+                  <p>By Alex Taylor • May 2025</p>
+                </header>
+
+                <p>We've added a dark mode option to reduce eye strain...</p>
+
+                <footer>
+                  <a href="#">Read more</a>
+                </footer>
+              </article>
+            --></code></pre>
+            <p>Semantic elements help you create nested meaning — not just layout.</p>
+          </article>
+
+          <article>
+            <h2>What about role="region"?</h2>
+            <ul>
+              <li>Creates a landmark for a section of the page.</li>
+              <li>Screen readers can navigate to it, but only if it has an accessible name.</li>
+              <li>Most of the time, you probably don't need it - use semantic elements first.</li>
+              <li>Generally only to be used for a custom component that has no semantic tag available.</li>
+            </ul>
+
+            <pre class="language-html"><code><!--
+              <div aria-labelledby="recent-posts-title" role="region">
+                <h2 id="recent-posts-title">Recent Posts</h2>
+                ...
+              </div>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Headings build the outline</h2>
+            <p>Don't use headings just for size - use them for structure.</p>
+            <pre class="language-html"><code><!--
+              <h1>Level one heading</h1>
+              <p>Usually only one per page</p>
+
+              <h2>Level two heading</h2>
+              <p>Heads up each section of the page</p>
+
+              <h3>Level three heading</h3>
+              <p>Heads up each subsection of the page</p>
+            --></code></pre>
+
+            <p>Don't skip levels.</p>
+            <p>Use CSS to adjust style and size as needed.</p>
+          </article>
+
+          <article>
+            <h2>The humble div</h2>
+            <p>Neutral container, has no semantic meaning.</p>
+            <p>Can be styled with CSS, used to group content.</p>
+            <p>Not every <code>&lt;div&gt;</code> is bad - but they should be intentional and deliberate.</p>
+          </article>
+
+          <article>
+            <header><h2>Exercise 2: Structure this page</h2></header>
+            <div class="body">
+              <h3>How would you set up the main regions for this page?</h3>
+                <p><img src="imgs/ex2-1-lms.png" alt="Mockup of an LMS dashboard with different sections of content"></p>
+                <p><a href="unit2-solution.html">Solution</a></p>
+            </div>
+            <footer>Image source: <a href="https://www.figma.com/community/file/1319524540637048768">LMS and Course dashboard design</a> by <a href="https://www.figma.com/@iconstica">Iconstica</a></footer>
+          </article>
+          <article>
+            <h2>Unit 2: Landmarks and page structure</h2>
+            <p>Key takeaways:</p>
+
+            <ol>
+              <li>Landmarks are like signposts.</li>
+              <li>Semantic regions help users find their way around and understand how the content is structured.</li>
+              <li>Headings create the outline.</li>
+              <li>This is often the most overlooked layer of accessibility, but one of the easiest to get right if you plan ahead.</li>
+            </ol>
+          </article>
+        </section>
+      </main>
+    </div>
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >By Natalie MacLees, founder of <a href="https://a20y.com">AAArdvark</a></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+    <script src="js/color-switcher.js"></script>
+    <script src="js/slide-nav.js"></script>
+    <script>
+      let toggle = document.getElementById('menu-toggle');
+      let menu = document.getElementById('side-menu');
+      toggle.addEventListener(
+        "click",
+        (event) => {
+          event.preventDefault();
+          let currentState = toggle.getAttribute('aria-expanded');
+          if (currentState.toLowerCase() == 'true') {
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerText = 'Show menu';
+            menu.style.display = 'none';
+          } else {
+            toggle.setAttribute('aria-expanded', true);
+            toggle.innerText = 'Hide menu';
+            menu.style.display = 'block';
+          }
+        }
+      );
+    </script>
+    <script src="js/prism.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true,
+        'break-lines': 80,
+        'remove-initial-line-feed': true,
+        'tabs-to-spaces': 4
+      });
+    </script>
+  </body>
+</html>

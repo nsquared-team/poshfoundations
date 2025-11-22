@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Bonus: POSH as a team practice - POSH Foundations Workshop Materials</title>
+    <meta name="description" content="Workshop materials for the POSH foundations workshop for learning semantic HTML">
+
+    <link rel="stylesheet" href="css/pico.css">
+    <link id="color" rel="stylesheet" href="css/amber.css">
+    <link rel="stylesheet" href="css/pico.posh.css">
+    <link id="syntax" rel="stylesheet" href="css/prism.css">
+  </head>
+
+  <body class="line-numbers">
+    <a href="#content" class="skip-to-content contrast button">Skip to content</a>
+    <!-- Header -->
+    <header>
+      <div class="container grid">
+        <div>
+          <p class="site-title"><a href="index.html">POSH Foundations</a></p>
+          <p>Building accessible interfaces with semantic HTML</p>
+        </div>
+        <div class="theme-selector">
+          Theme selector
+          <div role="group">
+            <button type="button" class="outline" data-theme-switcher="auto">
+              Auto
+            </button>
+            <button type="button" class="outline" data-theme-switcher="light">
+              Light
+            </button>
+            <button type="button" class="outline" data-theme-switcher="dark">
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container color-selector">
+        <div role="group">
+          <button type="button" class="pico-background-red" data-color-switcher="red"><span class="visually-hidden">Red</span></button>
+          <button type="button" class="pico-background-pink" data-color-switcher="pink"><span class="visually-hidden">Pink</span></button>
+          <button type="button" class="pico-background-fuchsia" data-color-switcher="fuchsia"><span class="visually-hidden">Fuchsia</span></button>
+          <button type="button" class="pico-background-purple" data-color-switcher="purple"><span class="visually-hidden">Purple</span></button>
+          <button type="button" class="pico-background-violet" data-color-switcher="violet"><span class="visually-hidden">Violet</span></button>
+          <button type="button" class="pico-background-indigo" data-color-switcher="indigo"><span class="visually-hidden">Indigo</span></button>
+          <button type="button" class="pico-background-blue" data-color-switcher="blue"><span class="visually-hidden">Blue</span></button>
+          <button type="button" class="pico-background-azure" data-color-switcher="azure"><span class="visually-hidden">Azure</span></button>
+          <button type="button" class="pico-background-cyan" data-color-switcher="cyan"><span class="visually-hidden">Cyan</span></button>
+          <button type="button" class="pico-background-jade" data-color-switcher="jade"><span class="visually-hidden">Jade</span></button>
+          <button type="button" class="pico-background-green" data-color-switcher="green"><span class="visually-hidden">Green</span></button>
+          <button type="button" class="pico-background-lime" data-color-switcher="lime"><span class="visually-hidden">Lime</span></button>
+          <button type="button" class="pico-background-yellow" data-color-switcher="yellow"><span class="visually-hidden">Yellow</span></button>
+          <button type="button" class="pico-background-amber" data-color-switcher="amber"><span class="visually-hidden">Amber</span></button>
+          <button type="button" class="pico-background-pumpkin" data-color-switcher="pumpkin"><span class="visually-hidden">Pumpkin</span></button>
+          <button type="button" class="pico-background-orange" data-color-switcher="orange"><span class="visually-hidden">Orange</span></button>
+          <button type="button" class="pico-background-sand" data-color-switcher="sand"><span class="visually-hidden">Sand</span></button>
+          <button type="button" class="pico-background-grey" data-color-switcher="grey"><span class="visually-hidden">Grey</span></button>
+          <button type="button" class="pico-background-zinc" data-color-switcher="zinc"><span class="visually-hidden">Zinc</span></button>
+          <button type="button" class="pico-background-slate" data-color-switcher="slate"><span class="visually-hidden">Slate</span></button>
+        </div>
+      </div>
+      <div class="container">
+        <button type="button" aria-expanded="true" aria-controls="side-menu" id="menu-toggle">Hide menu</button>
+      </div>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <div class="container flex">
+      <nav class="menu" id="side-menu" aria-hidden="false">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="intro.html">Introduction</a>
+          </li>
+          <li>
+            <a href="unit1.html">Unit 1: Why HTML still matters</a>
+          </li>
+          <li>
+            <a href="unit2.html">Unit 2: Landmarks and page structure</a>
+          </li>
+          <li>
+            <a href="unit3.html">Unit 3: Lists, tables, and relationships</a>
+          </li>
+          <li>
+            <a href="unit4.html">Unit 4: Links, buttons, and forms</a>
+          </li>
+          <li>
+            <a href="unit5.html">Unit 5: Semantic HTML elements you may not know</a>
+          </li>
+          <li>
+            <a href="unit6.html">Unit 6: POSH in modern frameworks</a>
+          </li>
+          <li>
+            <a href="conclusion.html">Conclusion</a>
+          </li>
+          <li>
+            <a href="bonus.html" aria-current="page">Bonus: POSH as a team practice</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="content" tabindex="-1">
+        <!-- Unit 1 -->
+        <section id="unit-2">
+          <h1>Unit 6: POSH as a team practice</h1>
+
+          <article>
+            <h2>POSH is a team sport</h2>
+            <ul>
+              <li>Semantic HTML isn't just one person's job.</li>
+              <li>Codebases, design systems, and products are team efforts.</li>
+              <li>A culture shift toward semantic HTML means better accessibility, quality, and sustainability.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>Consider semantics in code reviews</h2>
+            <ul>
+              <li>Make semantics part of the review checklist:
+                <ul>
+                  <li>Are headings used correctly?</li>
+                  <li>Are lists and tables structured correctly?</li>
+                  <li>Are links and buttons used correctly?</li>
+                  <li>Does this element reflect what it is, not just what it looks like?</li>
+                </ul>
+              </li>
+              <li>Could this be a <code>section</code> reather than a <code>div</code>?</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>Document semantic expectations</h2>
+            <p>In your design system or component library:</p>
+            <ul>
+              <li>Specify the underlying HTML elements.</li>
+              <li>Include notes on roles, relationships, and expected behavior.</li>
+            </ul>
+            <p>Help new team members understand the <em>why</em>, not just the <em>how</em>.</p>
+          </article>
+
+          <article>
+            <h2>Learn to spot anti-patterns</h2>
+            <p>Look for symptoms of non-semantic code:</p>
+            <ul>
+              <li>Lots of nested <code>&lt;div&gt;</code>s without clear notes.</li>
+              <li>Missing landmarks.</li>
+              <li>Clickable <code>&lt;div&gt;</code>s without focus styles.</li>
+              <li>Heading out of order.</li>
+              <li>Missing <code>&lt;fieldset&gt;</code>s and <code>&lt;legend&gt;</code>s.</li>
+            </ul>
+            <p>The earlier you catch these, the easier they are to fix.</p>
+          </article>
+
+          <article>
+            <h2>When to compromise</h2>
+            <p>Sometimes business, branding, or framework contraints force compromises.</p>
+            <p>If you must use ARIA or div-based interactions:</p>
+            <ul>
+              <li>Document it clearly.</li>
+              <li>Mimic native behavior as closely as possible - remember keyboard, roles, and states.</li>
+            </ul>
+            <p>It's okay to make tradeoffs thoughtfully - intentional exceptions are better than accidental mistakes.</p>
+          </article>
+
+          <article>
+            <header><h2>Exercise 6: Review this code</h2></header>
+            <div class="body">
+              <ol>
+                <li>
+                  <p>Review this simple profile page.</p>
+                  <p>
+                    <a href="https://codepen.io/Natalie-MacLees/pen/WbbZNey">Start</a> |
+                    <a href="https://codepen.io/Natalie-MacLees/pen/bNNoGdM">Solution</a>
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </article>
+
+          <article>
+            <h2>Unit 6: POSH as a team practice</h2>
+            <p>Key takeaways</p>
+            <ol>
+              <li>Semantic HTML is a shared responsibility, not an extra task.</li>
+              <li>Small improvements now prevent big accessibility headaches later.</li>
+              <li>Building a POSH mindset into your team creates better products for everyone.</li>
+              <li>Accessibility isn't a checklist, it's a craft we practice together.</li>
+            </ol>
+          </article>
+
+        </section>
+      </main>
+    </div>
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >By Natalie MacLees, founder of <a href="https://a20y.com">AAArdvark</a></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+    <script src="js/color-switcher.js"></script>
+    <script src="js/slide-nav.js"></script>
+    <script>
+      let toggle = document.getElementById('menu-toggle');
+      let menu = document.getElementById('side-menu');
+      toggle.addEventListener(
+        "click",
+        (event) => {
+          event.preventDefault();
+          let currentState = toggle.getAttribute('aria-expanded');
+          if (currentState.toLowerCase() == 'true') {
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerText = 'Show menu';
+            menu.style.display = 'none';
+          } else {
+            toggle.setAttribute('aria-expanded', true);
+            toggle.innerText = 'Hide menu';
+            menu.style.display = 'block';
+          }
+        }
+      );
+    </script>
+    <script src="js/prism.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true,
+        'break-lines': 80,
+        'remove-initial-line-feed': true,
+        'tabs-to-spaces': 4
+      });
+    </script>
+  </body>
+</html>

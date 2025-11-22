@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Unit 5: Semantic HTML elements you may not know - POSH Foundations Workshop Materials</title>
+    <meta name="description" content="Workshop materials for the POSH foundations workshop for learning semantic HTML">
+
+    <link rel="stylesheet" href="css/pico.css">
+    <link id="color" rel="stylesheet" href="css/amber.css">
+    <link rel="stylesheet" href="css/pico.posh.css">
+    <link id="syntax" rel="stylesheet" href="css/prism.css">
+  </head>
+
+  <body class="line-numbers">
+    <a href="#content" class="skip-to-content contrast button">Skip to content</a>
+    <!-- Header -->
+    <header>
+      <div class="container grid">
+        <div>
+          <p class="site-title"><a href="index.html">POSH Foundations</a></p>
+          <p>Building accessible interfaces with semantic HTML</p>
+        </div>
+        <div class="theme-selector">
+          Theme selector
+          <div role="group">
+            <button type="button" class="outline" data-theme-switcher="auto">
+              Auto
+            </button>
+            <button type="button" class="outline" data-theme-switcher="light">
+              Light
+            </button>
+            <button type="button" class="outline" data-theme-switcher="dark">
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container color-selector">
+        <div role="group">
+          <button type="button" class="pico-background-red" data-color-switcher="red"><span class="visually-hidden">Red</span></button>
+          <button type="button" class="pico-background-pink" data-color-switcher="pink"><span class="visually-hidden">Pink</span></button>
+          <button type="button" class="pico-background-fuchsia" data-color-switcher="fuchsia"><span class="visually-hidden">Fuchsia</span></button>
+          <button type="button" class="pico-background-purple" data-color-switcher="purple"><span class="visually-hidden">Purple</span></button>
+          <button type="button" class="pico-background-violet" data-color-switcher="violet"><span class="visually-hidden">Violet</span></button>
+          <button type="button" class="pico-background-indigo" data-color-switcher="indigo"><span class="visually-hidden">Indigo</span></button>
+          <button type="button" class="pico-background-blue" data-color-switcher="blue"><span class="visually-hidden">Blue</span></button>
+          <button type="button" class="pico-background-azure" data-color-switcher="azure"><span class="visually-hidden">Azure</span></button>
+          <button type="button" class="pico-background-cyan" data-color-switcher="cyan"><span class="visually-hidden">Cyan</span></button>
+          <button type="button" class="pico-background-jade" data-color-switcher="jade"><span class="visually-hidden">Jade</span></button>
+          <button type="button" class="pico-background-green" data-color-switcher="green"><span class="visually-hidden">Green</span></button>
+          <button type="button" class="pico-background-lime" data-color-switcher="lime"><span class="visually-hidden">Lime</span></button>
+          <button type="button" class="pico-background-yellow" data-color-switcher="yellow"><span class="visually-hidden">Yellow</span></button>
+          <button type="button" class="pico-background-amber" data-color-switcher="amber"><span class="visually-hidden">Amber</span></button>
+          <button type="button" class="pico-background-pumpkin" data-color-switcher="pumpkin"><span class="visually-hidden">Pumpkin</span></button>
+          <button type="button" class="pico-background-orange" data-color-switcher="orange"><span class="visually-hidden">Orange</span></button>
+          <button type="button" class="pico-background-sand" data-color-switcher="sand"><span class="visually-hidden">Sand</span></button>
+          <button type="button" class="pico-background-grey" data-color-switcher="grey"><span class="visually-hidden">Grey</span></button>
+          <button type="button" class="pico-background-zinc" data-color-switcher="zinc"><span class="visually-hidden">Zinc</span></button>
+          <button type="button" class="pico-background-slate" data-color-switcher="slate"><span class="visually-hidden">Slate</span></button>
+        </div>
+      </div>
+      <div class="container">
+        <button type="button" aria-expanded="true" aria-controls="side-menu" id="menu-toggle">Hide menu</button>
+      </div>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <div class="container flex">
+      <nav class="menu" id="side-menu" aria-hidden="false">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="intro.html">Introduction</a>
+          </li>
+          <li>
+            <a href="unit1.html">Unit 1: Why HTML still matters</a>
+          </li>
+          <li>
+            <a href="unit2.html">Unit 2: Landmarks and page structure</a>
+          </li>
+          <li>
+            <a href="unit3.html">Unit 3: Lists, tables, and relationships</a>
+          </li>
+          <li>
+            <a href="unit4.html">Unit 4: Links, buttons, and forms</a>
+          </li>
+          <li>
+            <a href="unit5.html" aria-current="page">Unit 5: Semantic HTML elements you may not know</a>
+          </li>
+          <li>
+            <a href="unit6.html">Unit 6: POSH in modern frameworks</a>
+          </li>
+          <li>
+            <a href="conclusion.html">Conclusion</a>
+          </li>
+          <li>
+            <a href="bonus.html">Bonus: POSH as a team practice</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="content" tabindex="-1">
+        <!-- Unit 1 -->
+        <section id="unit-2">
+          <h1>Unit 5: Semantic HTML elements you may not know</h1>
+
+          <article>
+            <h2>Modal dialogs</h2>
+            <p>Correctly coding a modal requires a lot of considerations:</p>
+            <ul>
+              <li>When the modal opens, focus should be moved to the modal.</li>
+              <li>While the modal is open, focus should be trapped in the modal.</li>
+              <li>When the modal closes, focus should return to the triggering element.</li>
+              <li>Using the ESC key should close the modal.</li>
+              <li>Cannot tab to modal content while it is closed.</li>
+              <li>Modal should have a clear and descriptive title.</li>
+              <li>Should provide a visible and clear close button.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>The dialog element</h2>
+            <ul>
+              <li>Native modal dialogs: no ARIA role needed.</li>
+              <li>Manages focus automatically when opened.</li>
+              <li>Locks background from interaction while open.</li>
+              <li>Simple API: <code>.showModal()</code> and <code>.close()</code>.</li>
+              <li>Fully supported in modern browsers (Chrome, Firefox, Safari, Edge).</li>
+              <li>POSH-friendly.</li>
+            </ul>
+            <pre class="language-html"><code><!--
+              <dialog id="settings-dialog" aria-labelledby="settings-heading">
+                <h2 id="settings-heading">Settings</h2>
+                <p>Adjust your preferences here.</p>
+                <form method="dialog">
+                  <button>Close</button>
+                </form>
+              </dialog>
+
+              <button type="button" onclick="document.getElementById('settings-dialog').showModal()">
+                Open Settings
+              </button>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Modal example</h2>
+            <dialog id="settings-dialog" style="flex-direction:column;" aria-labelledby="settings-heading">
+              <h2 id="settings-heading">Settings</h2>
+              <p>Adjust your preferences here.</p>
+              <form method="dialog">
+                <button>Close</button>
+              </form>
+            </dialog>
+
+            <button type="button"
+            onclick="document.getElementById('settings-dialog').showModal()">
+              Open Settings
+            </button>
+          </article>
+
+          <article>
+            <h2>The progress element</h2>
+            <p>Show the progress toward completing a task.</p>
+            <label for="image-upload">Uploading image:</label>
+            <progress value="70" max="100" id="image-upload">70%</progress>
+
+            <pre class="language-html"><code><!--
+              <label for="image-upload">Uploading image:</label>
+              <progress value="70" max="100" id="image-upload">70%</progress>
+            --></code></pre>
+            <p>Note: There is no <code>min</code> attribute - min is always 0.</p>
+          </article>
+
+          <article>
+            <h2>The meter element</h2>
+            <p>A scalar value within a range or a fractional value.</p>
+            <label for="battery1">Battery:</label>
+            <meter id="battery1" min="0" max="100" value="50">
+              at 50/100
+            </meter>
+            <pre class="language-html"><code><!--
+            <label for="battery">Battery:</label>
+            <meter id="battery" min="0" max="100" value="50">
+              at 50/100
+            </meter>
+            --></code></pre>
+            <label for="battery2">Battery:</label>
+            <meter id="battery2" min="0" max="100" low="20" value="15">
+              at 15/100
+            </meter>
+            <pre class="language-html"><code><!--
+            <label for="battery2">Battery:</label>
+            <meter id="battery2" min="0" max="100" low="20" value="15">
+              at 15/100
+            </meter>
+            --></code></pre>
+          </article>
+
+        </section>
+      </main>
+    </div>
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >By Natalie MacLees, founder of <a href="https://a20y.com">AAArdvark</a></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+    <script src="js/color-switcher.js"></script>
+    <script src="js/slide-nav.js"></script>
+    <script>
+      let toggle = document.getElementById('menu-toggle');
+      let menu = document.getElementById('side-menu');
+      toggle.addEventListener(
+        "click",
+        (event) => {
+          event.preventDefault();
+          let currentState = toggle.getAttribute('aria-expanded');
+          if (currentState.toLowerCase() == 'true') {
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerText = 'Show menu';
+            menu.style.display = 'none';
+          } else {
+            toggle.setAttribute('aria-expanded', true);
+            toggle.innerText = 'Hide menu';
+            menu.style.display = 'block';
+          }
+        }
+      );
+    </script>
+    <script src="js/prism.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true,
+        'break-lines': 80,
+        'remove-initial-line-feed': true,
+        'tabs-to-spaces': 4
+      });
+    </script>
+  </body>
+</html>

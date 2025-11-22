@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Unit 1: Why HTML still matters - POSH Foundations Workshop Materials</title>
+    <meta name="description" content="Workshop materials for the POSH foundations workshop for learning semantic HTML">
+
+    <link rel="stylesheet" href="css/pico.css">
+    <link id="color" rel="stylesheet" href="css/amber.css">
+    <link rel="stylesheet" href="css/pico.posh.css">
+    <link id="syntax" rel="stylesheet" href="css/prism.css">
+  </head>
+
+  <body class="line-numbers">
+    <a href="#content" class="skip-to-content contrast button">Skip to content</a>
+    <!-- Header -->
+    <header>
+      <div class="container grid">
+        <div>
+          <p class="site-title"><a href="index.html">POSH Foundations</a></p>
+          <p>Building accessible interfaces with semantic HTML</p>
+        </div>
+        <div class="theme-selector">
+          Theme selector
+          <div role="group">
+            <button type="button" class="outline" data-theme-switcher="auto">
+              Auto
+            </button>
+            <button type="button" class="outline" data-theme-switcher="light">
+              Light
+            </button>
+            <button type="button" class="outline" data-theme-switcher="dark">
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container color-selector">
+        <div role="group">
+          <button type="button" class="pico-background-red" data-color-switcher="red"><span class="visually-hidden">Red</span></button>
+          <button type="button" class="pico-background-pink" data-color-switcher="pink"><span class="visually-hidden">Pink</span></button>
+          <button type="button" class="pico-background-fuchsia" data-color-switcher="fuchsia"><span class="visually-hidden">Fuchsia</span></button>
+          <button type="button" class="pico-background-purple" data-color-switcher="purple"><span class="visually-hidden">Purple</span></button>
+          <button type="button" class="pico-background-violet" data-color-switcher="violet"><span class="visually-hidden">Violet</span></button>
+          <button type="button" class="pico-background-indigo" data-color-switcher="indigo"><span class="visually-hidden">Indigo</span></button>
+          <button type="button" class="pico-background-blue" data-color-switcher="blue"><span class="visually-hidden">Blue</span></button>
+          <button type="button" class="pico-background-azure" data-color-switcher="azure"><span class="visually-hidden">Azure</span></button>
+          <button type="button" class="pico-background-cyan" data-color-switcher="cyan"><span class="visually-hidden">Cyan</span></button>
+          <button type="button" class="pico-background-jade" data-color-switcher="jade"><span class="visually-hidden">Jade</span></button>
+          <button type="button" class="pico-background-green" data-color-switcher="green"><span class="visually-hidden">Green</span></button>
+          <button type="button" class="pico-background-lime" data-color-switcher="lime"><span class="visually-hidden">Lime</span></button>
+          <button type="button" class="pico-background-yellow" data-color-switcher="yellow"><span class="visually-hidden">Yellow</span></button>
+          <button type="button" class="pico-background-amber" data-color-switcher="amber"><span class="visually-hidden">Amber</span></button>
+          <button type="button" class="pico-background-pumpkin" data-color-switcher="pumpkin"><span class="visually-hidden">Pumpkin</span></button>
+          <button type="button" class="pico-background-orange" data-color-switcher="orange"><span class="visually-hidden">Orange</span></button>
+          <button type="button" class="pico-background-sand" data-color-switcher="sand"><span class="visually-hidden">Sand</span></button>
+          <button type="button" class="pico-background-grey" data-color-switcher="grey"><span class="visually-hidden">Grey</span></button>
+          <button type="button" class="pico-background-zinc" data-color-switcher="zinc"><span class="visually-hidden">Zinc</span></button>
+          <button type="button" class="pico-background-slate" data-color-switcher="slate"><span class="visually-hidden">Slate</span></button>
+        </div>
+      </div>
+      <div class="container">
+        <button type="button" aria-expanded="true" aria-controls="side-menu" id="menu-toggle">Hide menu</button>
+      </div>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <div class="container flex">
+      <nav class="menu" id="side-menu" aria-hidden="false">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="intro.html">Introduction</a>
+          </li>
+          <li>
+            <a href="unit1.html" aria-current="page">Unit 1: Why HTML still matters</a>
+          </li>
+          <li>
+            <a href="unit2.html">Unit 2: Landmarks and page structure</a>
+          </li>
+          <li>
+            <a href="unit3.html">Unit 3: Lists, tables, and relationships</a>
+          </li>
+          <li>
+            <a href="unit4.html">Unit 4: Links, buttons, and forms</a>
+          </li>
+          <li>
+            <a href="unit5.html">Unit 5: Semantic HTML elements you may not know</a>
+          </li>
+          <li>
+            <a href="unit6.html">Unit 6: POSH in modern frameworks</a>
+          </li>
+          <li>
+            <a href="conclusion.html">Conclusion</a>
+          </li>
+          <li>
+            <a href="bonus.html">Bonus: POSH as a team practice</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="content" tabindex="-1">
+        <!-- Unit 1 -->
+        <section id="unit-1">
+          <h1>Unit 1: Why HTML still matters</h1>
+
+          <article>
+            <h2>Hyper<span style="text-decoration:underline;">t</span>ext Markup Language</h2>
+            <dl>
+              <dt>HT</dt>
+              <dd>Hypertext means the text contains links to other documents or resources.</dd>
+              <dt>M</dt>
+              <dd>Markup is ?</dd>
+              <dt>L</dt>
+              <dd>A language is a system of communciation.</dd>
+            </dl>
+          </article>
+
+          <article>
+            <h2>Markup</h2>
+            <p>A way of adding instructions to text to define structure, presentation, or meaning.</p>
+            <p>Originates from the publishing industry - typesetter's marks.</p>
+          </article>
+
+          <article>
+            <img src="imgs/newspaper.png" alt="Old newspaper with article on an auto tour that includes a visit to Clara Barton's home. Complete text follows this image.">
+          </article>
+
+          <article>
+            <pre><code class="language-html">
+<mark>Auto Tour To Oxford Includes Visit to Home of Clara Barton</mark>
+
+<mark>Purgatory Reservation Is Also in Itinerary</mark>
+
+In covering Worcester County points of interest, historical local offices of the Writers' Project, connected with the National Guide, have been impressed with the natural beauty of many parts of the county. As a side issue a number of short drives have been laid out that will include many of the more interesting roads, some of which are a bit off the usual routes. These trips are not intended to lead to any particular points of interest, but such will be mentioned as they occur.
+
+It is hoped that some of these routes may serve as suggestions to motorists who are sometimes at a loss as to where to go when they have a limited time to "just ride." The routes will be about 50 miles round trip. Some longer ones will be suggested. Road conditions will be as of the date of publication. Driving time will be based on touring speed, and for convenience the trips will start from City Hall.
+
+<mark>Trip III</mark>
+
+Worcester to Auburn, Oxford. West Sutton, Purgatory, Whitinsville, East Douglas, North Uxbridge, to Worcester, via North Grafton.
+
+One of the most pleasant and interesting trips south of Worcester is the one listed for this week. The driver has his choice of routes to the Auburn line on Southbridge street. At the traffic light at Stoneville, turn left, and continuing right around Dunn Pond, climb the hill into Auburn Center. Off the main route, this beautiful little town is apt to be forgotten by the casual rider. Through the  main street down the hill and bearing right re-enter route 12 and continue toward Oxford, through North Oxford past depressions which were wells. Built in 1687, this place of refuge was approximately 105 by 73. Incidentally the field affords a wide view of the county, particularly to the north.
+
+Back to Route 12, turn left and retrace to the cross-roads at the center, and here turn right on road marked Sutton. At the center a mile stone marked "33 miles to Boston" and also with the initials J.W. is known as the Josiah Wellcott stone.
+
+<mark>Beautiful Road</mark>
+
+Not many Worcester riders are familiar with this beautiful cross-country road. The paving is good and the country pretty with frequent posts between the broad fields and pastures. There may be a threatened apple famine in some parts of the county, but along this road there is at least one large orchard that promises a remarkably heavy crop. Passing through the tiny village of West Sutton continue straight through crossing the Douglas road. From the crests of the grades are frequent glimpses of hills off to the left, with Wachusett topping them all. A mile and three-quarters from the Douglas road turn right on the hard road and follow the red arrow marked Purgatory. For a short distance there is another remarkable view of hills, this time to the south and east. The road winds through both wooded and open country for nearly two miles.
+
+Now a State reservation, the area around Purgatory Chasm is most attractive. A small park has been equipped with swings and other apparatus dear to children; fireplaces built, tables provided and without the main interest of the chasm it is a fine picnic spot. As to the chasm itself, at least take a look at it. In spite of the hodge-podge of great rocks, it is perfectly safe to venture down, though it is no place for high heels. Geologists in general agree that the great cleft was caused by an earthquake, possibly as late as the one recorded in 1755.
+
+<mark>Old Tavern</mark>
+
+Continue on from Purgatory down hill through the woods to Whitinsville and at the traffic beacon beyond the Whittins' plant turn right on road marked Douglas. Bear right over the bridge and then enjoy a beautiful woods-lined road toward East Douglas. At the cross roads beyond the Schuater Mills turn left into the village and at the top of the grade, swing left around the monument on the road marked Uxbridge.
+
+Bear left at the next fork. The road is a hill and dale route through fairly open country with here and there glimpses of far hills. A little less than half a mile from the town line, about the middle of the hill is the old Thayer Tavern on the left. This interesting building with its huge chimney and fireplaces was once a station on the under-ground railway for escaping slaves. Continue through the next cross roads and then turn left on Route 22.
+
+<mark>Hartford</mark>
+
+From here head toward Worcester. At the junction of Routes 122 and 122A bear right with 122. Just beyond on the right a Tercentenary marker notes the trail over which Rev. Thomas Hooker led the little company which was to found what is now Hartford, Conn.
+
+Follow 122 to Worcester. Distance, without side trips to the Barton Hotel or Huguenot Fort, a little more than 50 miles. For driving time figure about two hours over the through route.
+
+Another trip next Sunday.
+
+            </code></pre>
+          </article>
+
+          <article>
+            <h2>From paper to screen</h2>
+            <ul>
+              <li>Generalized Markup Langugage (GML) by IBM in 1969.</li>
+              <li>Standard Generalized Markup Language.</li>
+              <li>Hypertext Markup Language (HTML).</li>
+              <li>Markdown.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>GML</h2>
+            <pre><code class="language-html">
+<mark>:h1 id='intr'.</mark>Chapter 1:  Introduction
+<mark>:p.</mark>GML supported hierarchical containers, such as
+<mark>:ol.</mark>
+<mark>:li.</mark>Ordered lists (like this one),
+<mark>:li.</mark>Unordered lists, and
+<mark>:li.</mark>Definition lists
+<mark>:eol.</mark>
+as well as simple structures.
+<mark>:p.</mark>Markup minimization (later generalized and formalized in SGML),
+allowed the end-tags to be omitted for the "h1" and "p" elements.
+               </code></pre>
+               <p><a href="https://en.wikipedia.org/wiki/IBM_Generalized_Markup_Language">GML at Wikipedia</a></p>
+          </article>
+
+          <article>
+            <h2>SGML</h2>
+            <pre><code class="language-markup"><!--
+<anthology>
+  <poem><title>The SICK ROSE</title>
+     <stanza>
+          <line>O Rose thou art sick.</line>
+          <line>The invisible worm,</line>
+          <line>That flies in the night</line>
+          <line>In the howling storm:</line>
+     </stanza>
+     <stanza>
+          <line>Has found out thy bed</line>
+          <line>Of crimson joy:</line>
+          <line>And his dark secret love</line>
+          <line>Does thy life destroy.</line>
+     </stanza>
+  </poem>
+  <poem>
+    ...
+  </poem>
+</anthology>
+            --></code></pre>
+            <p><a href="https://www.tei-c.org/Vault/GL/P3/SG.htm">A Gentle Introduction to SGML</a> from Guidelines for Electronic Text Encoding and Interchange.</p>
+          </article>
+
+          <article>
+            <h2>HTML</h2>
+            <pre class="language-html"><code><!--
+              <article>
+                <h1>Chocolate Chip Cookies</h1>
+                <p>This classic recipe makes delicious cookies every time.</p>
+
+                <h2>Ingredients</h2>
+                <ul>
+                  <li>1 cup butter</li>
+                  <li>1 cup sugar</li>
+                  <li>2 cups flour</li>
+                  <li>1 cup chocolate chips</li>
+                </ul>
+
+                <h2>Instructions</h2>
+                <ol>
+                  <li>Preheat the oven to 350°F (175°C).</li>
+                  <li>Cream the butter and sugar together.</li>
+                  <li>Add flour, then chocolate chips.</li>
+                  <li>Bake for 10–12 minutes.</li>
+                </ol>
+              </article>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Markdown</h2>
+            <pre class="language-markup"><code><!--
+              # Chocolate Chip Cookies
+
+              This classic recipe makes delicious cookies every time.
+
+              ## Ingredients
+
+              - 1 cup butter
+              - 1 cup sugar
+              - 2 cups flour
+              - 1 cup chocolate chips
+
+              ## Instructions
+
+              1. Preheat the oven to 350°F (175°C).
+              2. Cream the butter and sugar together.
+              3. Add flour, then chocolate chips.
+              4. Bake for 10–12 minutes.
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>HTML isn't dead</h2>
+            <p>It's still the foundation of the web, no matter which tech stack you use.</p>
+            <p>Modern JS apps render HTML to the DOM.</p>
+          </article>
+
+          <article>
+            <h2>Semantic</h2>
+            <p>Tags are about what it is, not what it looks like.</p>
+            <p>Semantic tags clearly define the meaning and purpose of the content they contain.</p>
+            <p>This helps assistive technology, search engines, and people understand the structure of the content.</p>
+          </article>
+
+          <article>
+            <h2>Semantic HTML tags can...</h2>
+            <ul>
+              <li>Create the outline or structure of a document.</li>
+              <li>Programmatically express relationships between pieces of content.</li>
+              <li>Make your code easier to read and understand.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>What goes wrong without semantic HTML?</h2>
+            <pre class="language-html"><code><!--
+              <div class="button" onclick="handleClick()">Click me</div>
+            --></code></pre>
+
+            <p><div class="button" style="max-width:200px;">Click me</div></p>
+
+            <h3>It looks fine, but...</h3>
+            <p>It cannot be reached by keyboard.</p>
+            <p>It doesn't announce itself as a button.</p>
+            <p>It doesn't trigger a form submission.</p>
+          </article>
+
+          <article>
+            <h2>A heading tag doesn't just make the text large and bold...</h2>
+            <p>It imparts meaning to the content inside.</p>
+            <p>The headings in a document define the outline and structure of the content.</p>
+          </article>
+
+          <article>
+            <h2>Some common misconceptions</h2>
+            <ul>
+              <li>You can just fix it with ARIA and JavaScript.</li>
+              <li>Accessibility is handled by the component library.</li>
+              <li>We don't write HTML, we write JSX.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>The reality</h2>
+            <p>Semantic HTML is your first line of defense.</p>
+          </article>
+
+          <article>
+            <h2>Non-semantic tags</h2>
+            <p><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> don't communicate meaning - they provide no structure or information about the content inside.</p>
+            <p>That's not a bad thing...sometimes to achieve the layout you want, you need extra containers that don't impart meaning.</p>
+            <p>Using exclusively <code>&lt;div&gt;</code>s and <code>&lt;span&gt;</code>s around content is a problem.</p>
+            <p>Divitis and spanitis.</p>
+          </article>
+
+          <article>
+            <header><h2>Exercise 1: What's in a tag?</h2></header>
+            <div class="body">
+              <h3>How would you mark these up?</h3>
+              <ol>
+                <li>
+                  <p><img src="imgs/ex1-1-clients.png" alt="Clients section of a website showing a heading, description, and selection of client logos"></p>
+                  <p><a href="https://codepen.io/Natalie-MacLees/pen/qEEXmBw">Start</a> | <a href="https://codepen.io/Natalie-MacLees/pen/raazmVZ">Solution</a></p>
+                </li>
+                <li>
+                  <p><img src="imgs/ex1-2-unlock.png" alt="Call to action section of a website with image, headline, text, and button"></p>
+                  <p><a href="https://codepen.io/Natalie-MacLees/pen/pvvrPbL">Start</a> | <a href="https://codepen.io/Natalie-MacLees/pen/raazmLq">Solution</a></p>
+                </li>
+              </ol>
+            </div>
+            <footer>Image source: <a href="https://www.figma.com/community/file/1222060007934600841">Responsive landing page design</a> by <a href="https://www.figma.com/@itsmuntasirb">Muntasir Billah</a></footer>
+          </article>
+
+          <article>
+            <h2>Unit 1: Why HTML still matters</h2>
+            <p>Key takeaways</p>
+
+            <ol>
+              <li>HTML is not optional, it's critical.</li>
+              <li>Semantic HTML is functional HTML.</li>
+              <li>Your tech stack doesn't matter - it's all HTML in the end.</li>
+              <li>If you've ever felt  HTML was too basic and easy to matter, think again.</li>
+            </ol>
+          </article>
+        </section>
+      </main>
+    </div>
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >By Natalie MacLees, founder of <a href="https://a20y.com">AAArdvark</a></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+    <script src="js/color-switcher.js"></script>
+    <script src="js/slide-nav.js"></script>
+    <script>
+      let toggle = document.getElementById('menu-toggle');
+      let menu = document.getElementById('side-menu');
+      toggle.addEventListener(
+        "click",
+        (event) => {
+          event.preventDefault();
+          let currentState = toggle.getAttribute('aria-expanded');
+          if (currentState.toLowerCase() == 'true') {
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerText = 'Show menu';
+            menu.style.display = 'none';
+          } else {
+            toggle.setAttribute('aria-expanded', true);
+            toggle.innerText = 'Hide menu';
+            menu.style.display = 'block';
+          }
+        }
+      );
+    </script>
+    <script src="js/prism.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true,
+        'break-lines': 80,
+        'remove-initial-line-feed': true,
+        'tabs-to-spaces': 4
+      });
+    </script>
+  </body>
+</html>

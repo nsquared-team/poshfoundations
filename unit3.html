@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Unit 3: Lists, tables, and relationships - POSH Foundations Workshop Materials</title>
+    <meta name="description" content="Workshop materials for the POSH foundations workshop for learning semantic HTML">
+
+    <link rel="stylesheet" href="css/pico.css">
+    <link id="color" rel="stylesheet" href="css/amber.css">
+    <link rel="stylesheet" href="css/pico.posh.css">
+    <link id="syntax" rel="stylesheet" href="css/prism.css">
+  </head>
+
+  <body class="line-numbers">
+    <a href="#content" class="skip-to-content contrast button">Skip to content</a>
+    <!-- Header -->
+    <header>
+      <div class="container grid">
+        <div>
+          <p class="site-title"><a href="index.html">POSH Foundations</a></p>
+          <p>Building accessible interfaces with semantic HTML</p>
+        </div>
+        <div class="theme-selector">
+          Theme selector
+          <div role="group">
+            <button type="button" class="outline" data-theme-switcher="auto">
+              Auto
+            </button>
+            <button type="button" class="outline" data-theme-switcher="light">
+              Light
+            </button>
+            <button type="button" class="outline" data-theme-switcher="dark">
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container color-selector">
+        <div role="group">
+          <button type="button" class="pico-background-red" data-color-switcher="red"><span class="visually-hidden">Red</span></button>
+          <button type="button" class="pico-background-pink" data-color-switcher="pink"><span class="visually-hidden">Pink</span></button>
+          <button type="button" class="pico-background-fuchsia" data-color-switcher="fuchsia"><span class="visually-hidden">Fuchsia</span></button>
+          <button type="button" class="pico-background-purple" data-color-switcher="purple"><span class="visually-hidden">Purple</span></button>
+          <button type="button" class="pico-background-violet" data-color-switcher="violet"><span class="visually-hidden">Violet</span></button>
+          <button type="button" class="pico-background-indigo" data-color-switcher="indigo"><span class="visually-hidden">Indigo</span></button>
+          <button type="button" class="pico-background-blue" data-color-switcher="blue"><span class="visually-hidden">Blue</span></button>
+          <button type="button" class="pico-background-azure" data-color-switcher="azure"><span class="visually-hidden">Azure</span></button>
+          <button type="button" class="pico-background-cyan" data-color-switcher="cyan"><span class="visually-hidden">Cyan</span></button>
+          <button type="button" class="pico-background-jade" data-color-switcher="jade"><span class="visually-hidden">Jade</span></button>
+          <button type="button" class="pico-background-green" data-color-switcher="green"><span class="visually-hidden">Green</span></button>
+          <button type="button" class="pico-background-lime" data-color-switcher="lime"><span class="visually-hidden">Lime</span></button>
+          <button type="button" class="pico-background-yellow" data-color-switcher="yellow"><span class="visually-hidden">Yellow</span></button>
+          <button type="button" class="pico-background-amber" data-color-switcher="amber"><span class="visually-hidden">Amber</span></button>
+          <button type="button" class="pico-background-pumpkin" data-color-switcher="pumpkin"><span class="visually-hidden">Pumpkin</span></button>
+          <button type="button" class="pico-background-orange" data-color-switcher="orange"><span class="visually-hidden">Orange</span></button>
+          <button type="button" class="pico-background-sand" data-color-switcher="sand"><span class="visually-hidden">Sand</span></button>
+          <button type="button" class="pico-background-grey" data-color-switcher="grey"><span class="visually-hidden">Grey</span></button>
+          <button type="button" class="pico-background-zinc" data-color-switcher="zinc"><span class="visually-hidden">Zinc</span></button>
+          <button type="button" class="pico-background-slate" data-color-switcher="slate"><span class="visually-hidden">Slate</span></button>
+        </div>
+      </div>
+      <div class="container">
+        <button type="button" aria-expanded="true" aria-controls="side-menu" id="menu-toggle">Hide menu</button>
+      </div>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <div class="container flex">
+      <nav class="menu" id="side-menu" aria-hidden="false">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="intro.html">Introduction</a>
+          </li>
+          <li>
+            <a href="unit1.html">Unit 1: Why HTML still matters</a>
+          </li>
+          <li>
+            <a href="unit2.html">Unit 2: Landmarks and page structure</a>
+          </li>
+          <li>
+            <a href="unit3.html" aria-current="page">Unit 3: Lists, tables, and relationships</a>
+          </li>
+          <li>
+            <a href="unit4.html">Unit 4: Links, buttons, and forms</a>
+          </li>
+          <li>
+            <a href="unit5.html">Unit 5: Semantic HTML elements you may not know</a>
+          </li>
+          <li>
+            <a href="unit6.html">Unit 6: POSH in modern frameworks</a>
+          </li>
+          <li>
+            <a href="conclusion.html">Conclusion</a>
+          </li>
+          <li>
+            <a href="bonus.html">Bonus: POSH as a team practice</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="content" tabindex="-1">
+        <!-- Unit 1 -->
+        <section id="unit-2">
+          <h1>Unit 3: Lists, tables, and relationships</h1>
+
+          <article>
+            <h2>Use lists for items that are:</h2>
+            <ul>
+              <li>Part of a group (<code>&lt;ul&gt;</code>).</li>
+              <li>Sequential or ordered (<code>&lt;ol&gt;</code>).</li>
+              <li>Defined as a term and description (<code>&lt;dl&gt;</code>).</li>
+            </ul>
+            <h3>Structure</h3>
+            <p>Lists are a way to signal structure to assistive technology, not just visual design.</p>
+            <p>Lists are one of the easiest wins for semantic clarity - use any time content is grouped or sequential.</p>
+          </article>
+
+          <article>
+            <h2>Part of a group</h2>
+            <div class="container grid">
+              <div>
+                <pre class="language-html"><code><!--
+                  <ul>
+                    <li>List item.</li>
+                    <li>List item.</li>
+                  </ul>
+                --></code></pre>
+              </div>
+              <div>
+                <h3>Unordered List</h3>
+                <ul>
+                  <li>List item.</li>
+                  <li>List item.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="container grid">
+              <div>
+                <pre class="language-html"><code><!--
+                  <ul>
+                    <li>List item.
+                      <ul>
+                        <li>Nested list item.</li>
+                        <li>Nested list item.</li>
+                      </ul>
+                    </li>
+                    <li>List item.</li>
+                    <li>List item.</li>
+                  </ul>
+                --></code></pre>
+              </div>
+              <div>
+                <h3>Nested Unordered List</h3>
+                <ul>
+                  <li>List item.
+                    <ul>
+                      <li>Nested list item.</li>
+                      <li>Nested list item.</li>
+                    </ul>
+                  </li>
+                  <li>List item.</li>
+                  <li>List item.</li>
+                </ul>
+              </div>
+            </div>
+            <p>Use when order does not matter - grocery list, menu.</p>
+          </article>
+
+          <article>
+            <h2>Sequential or ordered</h2>
+            <div class="container grid">
+              <div>
+                <pre class="language-html"><code><!--
+                  <ol>
+                    <li>List item.</li>
+                    <li>List item.</li>
+                  </ol>
+                --></code></pre>
+              </div>
+              <div>
+                <h3>Ordered List</h3>
+                <ol>
+                  <li>List item.</li>
+                  <li>List item.</li>
+                </ol>
+              </div>
+            </div>
+            <div class="container grid">
+              <div>
+                <pre class="language-html"><code><!--
+                  <ol>
+                    <li>List item.
+                      <ol>
+                        <li>Nested list item.</li>
+                        <li>Nested list item.</li>
+                      </ol>
+                    </li>
+                    <li>List item.</li>
+                  </ol>
+                --></code></pre>
+              </div>
+              <div>
+                <h3>Nested Ordered List</h3>
+                <ol>
+                  <li>List item.
+                    <ol>
+                      <li>Nested list item.</li>
+                      <li>Nested list item.</li>
+                    </ol>
+                  </li>
+                  <li>List item.</li>
+                </ol>
+              </div>
+            </div>
+            <p>Use when order matters - steps in a process, checkout procedure.</p>
+          </article>
+
+          <article>
+            <h2>Terms and descriptions</h2>
+            <div class="container grid">
+              <div>
+                <pre class="language-html"><code><!--
+                  <dl>
+                    <dt>Term</dt>
+                    <dd>Definition</dd>
+                  </dl>
+
+                  Note: A div around each pair is permitted:
+                  <dl>
+                    <div>
+                      <dt>Term</dt>
+                      <dd>Definition</dd>
+                    </div>
+                  </dl>
+                --></code></pre>
+              </div>
+              <div>
+                <h3>Definition List</h3>
+                <dl>
+                  <dt>Term</dt>
+                  <dd>Definition</dd>
+                </dl>
+
+                <h3>Profile data</h3>
+                <dl>
+                  <div>
+                    <dt>Name</dt>
+                    <dd>Alex Aardvark</dd>
+                  </div>
+                  <div>
+                    <dt>Email</dt>
+                    <dd>alex@aardvark.com</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <p>Use for definitions and key/value pairs - profile data.</p>
+          </article>
+
+          <article>
+            <h2>Data Tables: Structure is everything</h2>
+            <pre class="language-html"><code><!--
+              <table>
+                <caption>Lunch order</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Hamburger</td>
+                    <td>2</td>
+                    <td>$10.00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fries</td>
+                    <td>1</td>
+                    <td>$2.00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Milkshake</td>
+                    <td>1</td>
+                    <td>$4.00</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="row" colspan="2">Total</th>
+                    <td>$16.00</td>
+                  </tr>
+                </tfoot>
+              </table>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Table</h2>
+            <table>
+              <caption>Lunch order</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Hamburger</td>
+                  <td>2</td>
+                  <td>$10.00</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fries</td>
+                  <td>1</td>
+                  <td>$2.00</td>
+                </tr>
+                <tr>
+                  <th scope="row">Milkshake</td>
+                  <td>1</td>
+                  <td>$4.00</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row" colspan="2">Total</th>
+                  <td>$16.00</td>
+                </tr>
+              </tfoot>
+            </table>
+
+            <p>Use <code>thead</code> and <code>tbody</code> for structure. Optionally, <code>tfoot</code>.</p>
+            <p>Use <code>th</code> for headers with <code>scope</code> attributes.</p>
+            <p>Optionally, use a <code>caption</code> element to help give context.</p>
+          </article>
+
+          <article>
+            <h2>Assistive Technology and Tables</h2>
+            <p>Some screen readers allow table navigtation shortcuts when tables are coded correctly.</p>
+            <p>Scope attributes give context to the table cell data being read.</p>
+          </article>
+
+          <article>
+            <header><h2>Exercise 3: Structure this data</h2></header>
+            <div class="body">
+              <ol>
+                <li>
+                  <h3>Navigation</h3>
+                  <p><img src="imgs/ex3-3-nav.png" alt="Horizontal app navigation bar"></p>
+                  <p>Image source: <a href="https://www.figma.com/community/file/1050653521839720958">Header navigation using variables</a> by <a href="https://www.figma.com/@Alex0x">Alex</a></p>
+                  <p><a href="https://codepen.io/Natalie-MacLees/pen/vEEjqvq">Solution Markup</a> | <a href="https://codepen.io/Natalie-MacLees/pen/RNNyzdX">Solution Styled</a></p>
+                </li>
+                <li>
+                  <h3>Profile</h3>
+                  <p><img src="imgs/ex3-2-profile.png" alt="Profile section showing some key/value pairs of information"></p>
+                  <p>Image source: <a href="https://www.figma.com/community/file/993336874717806276">User profile design</a> by <a href="https://www.figma.com/@ajai_">Ajai</a></p>
+                  <p><a href="https://codepen.io/Natalie-MacLees/pen/emmKGwJ">Solution Markup</a> | <a href="https://codepen.io/Natalie-MacLees/pen/xbbzXoq">Solution Styled</a></p>
+                </li>
+                <li>
+                  <h3>Pricing</h3>
+                  <p><img src="imgs/ex3-1-pricing.png" alt="Pricing table with three columns"></p>
+                  <p>Image source: <a href="https://www.figma.com/community/file/1140868779457790834">Pricing Page</a> by <a href="https://www.figma.com/@softwareseni">Softwareseni</a> and <a href="https://www.figma.com/@andiecrev">Andi S</a></p>
+                  <p><a href="https://codepen.io/Natalie-MacLees/pen/KwwRjxa">Solution Markup</a> | <a href="https://codepen.io/Natalie-MacLees/pen/myyKqOQ">Solution Styled</a></p>
+                </li>
+                <li>
+                  <h3>Table</h3>
+                  <p><img src="imgs/ex3-4-table.png" alt="Table of books showing title, author, rating, progress, etc."></p>
+                  <p>Image source: <a href="https://www.figma.com/community/file/1238417711722094516/tables-design-samples">Table design samples</a> by <a href="https://www.figma.com/@bondkowski">Evgeny Bondkowski</a></p>
+                  <p><a href="https://codepen.io/Natalie-MacLees/pen/myyKpOJ">Solution Markup</a> | <a href="https://codepen.io/Natalie-MacLees/pen/KwwBvXq">Solution Styled</a></p>
+                </li>
+              </ol>
+            </div>
+            <footer></footer>
+          </article>
+
+          <article>
+            <h2>Unit 3: Lists, tables, and relationships</h2>
+            <p>Key takeaways</p>
+
+            <ol>
+              <li>Use lists and tables to express relationships.</li>
+              <li>Good structure helps all users.</li>
+              <li>Is this a group? Is it related data?</li>
+              <li>Check your dashboards, content blocks, pricing tables - anywhere relationships appear visually, they should be present in code, too.</li>
+            </ol>
+          </article>
+        </section>
+      </main>
+    </div>
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >By Natalie MacLees, founder of <a href="https://a20y.com">AAArdvark</a></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+    <script src="js/color-switcher.js"></script>
+    <script src="js/slide-nav.js"></script>
+    <script>
+      let toggle = document.getElementById('menu-toggle');
+      let menu = document.getElementById('side-menu');
+      toggle.addEventListener(
+        "click",
+        (event) => {
+          event.preventDefault();
+          let currentState = toggle.getAttribute('aria-expanded');
+          if (currentState.toLowerCase() == 'true') {
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerText = 'Show menu';
+            menu.style.display = 'none';
+          } else {
+            toggle.setAttribute('aria-expanded', true);
+            toggle.innerText = 'Hide menu';
+            menu.style.display = 'block';
+          }
+        }
+      );
+    </script>
+    <script src="js/prism.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true,
+        'break-lines': 80,
+        'remove-initial-line-feed': true,
+        'tabs-to-spaces': 4
+      });
+    </script>
+  </body>
+</html>

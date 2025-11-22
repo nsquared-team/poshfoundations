@@ -1,0 +1,238 @@
+.skip-to-content {
+    z-index: 999;
+    position: absolute;
+    top: calc(var(--pico-spacing) * .75);
+    left: calc(var(--pico-spacing) * .75);
+    transform: translateY(-1000%);
+    --pico-box-shadow: var(--pico-card-box-shadow);
+    opacity: 0;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.visually-hidden {
+/*  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+*/}
+
+body>header.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.color-selector button {
+    border: 0 none;
+    font-size: 0.6rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+button:is([aria-current]:not([aria-current=false])), button:is(:hover, :active, :focus), [type=submit]:is([aria-current]:not([aria-current=false])), [type=submit]:is(:hover, :active, :focus), [type=reset]:is([aria-current]:not([aria-current=false])), [type=reset]:is(:hover, :active, :focus), [type=button]:is([aria-current]:not([aria-current=false])), [type=button]:is(:hover, :active, :focus), [type=file]::file-selector-button:is([aria-current]:not([aria-current=false])), [type=file]::file-selector-button:is(:hover, :active, :focus), [role=button]:is([aria-current]:not([aria-current=false])), .button:is([aria-current]:not([aria-current=false])), [role=button]:is(:hover, :active, :focus), .button:is(:hover, :active, :focus) {
+    outline: 2px solid var(--pico-primary-hover);
+    outline-offset: 2px;
+    z-index: 1;
+}
+
+.menu {
+    max-width: 220px;
+    flex: 0 1 20%;
+}
+
+pre {
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+}
+
+pre > code, pre > samp {
+    padding: 0;
+}
+
+#content {
+    flex: 1;
+}
+
+.flex {
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+}
+
+section {
+    width: 100%;
+}
+
+section section {
+    border: 1px dotted var(--pico-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    width: 100%;
+}
+
+section article {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+section article .body {
+    flex: 1;
+}
+
+nav.menu ul {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.site-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.site-title a {
+    text-decoration: none;
+}
+
+.site-title a:hover,
+.site-title a:focus {
+    text-decoration: underline;
+}
+:host, :root {
+    --pico-color-red: #c52f21;
+    --pico-color-pink: #d92662;
+    --pico-color-fuchsia: #c1208b;
+    --pico-color-purple: #9236a4;
+    --pico-color-violet: #7540bf;
+    --pico-color-indigo: #524ed2;
+    --pico-color-blue: #2060df;
+    --pico-color-azure: #0172ad;
+    --pico-color-cyan: #047878;
+    --pico-color-jade: #007a50;
+    --pico-color-green: #398712;
+    --pico-color-lime: #a5d601;
+    --pico-color-yellow: #f2df0d;
+    --pico-color-amber: #ffbf00;
+    --pico-color-pumpkin: #ff9500;
+    --pico-color-orange: #d24317;
+    --pico-color-sand: #ccc6b4;
+    --pico-color-grey: #ababab;
+    --pico-color-zinc: #646b79;
+    --pico-color-slate: #525f7a;
+    --pico-color-light: #fff;
+    --pico-color-dark: #000;
+}
+
+.pico-background-red {
+    background-color: var(--pico-color-red);
+    color: var(--pico-color-light);
+}
+
+.pico-background-pink {
+    background-color: var(--pico-color-pink);
+    color: var(--pico-color-light);
+}
+
+.pico-background-fuchsia {
+    background-color: var(--pico-color-fuchsia);
+    color: var(--pico-color-light);
+}
+
+.pico-background-purple {
+    background-color: var(--pico-color-purple);
+    color: var(--pico-color-light);
+}
+
+.pico-background-violet {
+    background-color: var(--pico-color-violet);
+    color: var(--pico-color-light);
+}
+
+.pico-background-indigo {
+    background-color: var(--pico-color-indigo);
+    color: var(--pico-color-light);
+}
+
+.pico-background-blue {
+    background-color: var(--pico-color-blue);
+    color: var(--pico-color-light);
+}
+
+.pico-background-azure {
+    background-color: var(--pico-color-azure);
+    color: var(--pico-color-light);
+}
+
+.pico-background-cyan {
+    background-color: var(--pico-color-cyan);
+    color: var(--pico-color-light);
+}
+
+.pico-background-jade {
+    background-color: var(--pico-color-jade);
+    color: var(--pico-color-light);
+}
+
+.pico-background-green {
+    background-color: var(--pico-color-green);
+    color: var(--pico-color-light);
+}
+
+.pico-background-lime {
+    background-color: var(--pico-color-lime);
+    color: var(--pico-color-dark);
+}
+
+.pico-background-yellow {
+    background-color: var(--pico-color-yellow);
+    color: var(--pico-color-dark);
+}
+
+.pico-background-amber {
+    background-color: var(--pico-color-amber);
+    color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin {
+    background-color: var(--pico-color-pumpkin);
+    color: var(--pico-color-dark);
+}
+
+.pico-background-orange {
+    background-color: var(--pico-color-orange);
+    color: var(--pico-color-light);
+}
+
+.pico-background-sand {
+    background-color: var(--pico-color-sand);
+    color: var(--pico-color-dark);
+}
+
+.pico-background-grey {
+    background-color: var(--pico-color-grey);
+    color: var(--pico-color-dark);
+}
+
+.pico-background-zinc {
+    background-color: var(--pico-color-zinc);
+    color: var(--pico-color-light);
+}
+
+.pico-background-slate {
+    background-color: var(--pico-color-slate);
+    color: var(--pico-color-light);
+}
+

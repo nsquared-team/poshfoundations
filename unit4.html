@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Unit 4: Links, buttons, and forms - POSH Foundations Workshop Materials</title>
+    <meta name="description" content="Workshop materials for the POSH foundations workshop for learning semantic HTML">
+
+    <link rel="stylesheet" href="css/pico.css">
+    <link id="color" rel="stylesheet" href="css/amber.css">
+    <link rel="stylesheet" href="css/pico.posh.css">
+    <link id="syntax" rel="stylesheet" href="css/prism.css">
+  </head>
+
+  <body class="line-numbers">
+    <a href="#content" class="skip-to-content contrast button">Skip to content</a>
+    <!-- Header -->
+    <header>
+      <div class="container grid">
+        <div>
+          <p class="site-title"><a href="index.html">POSH Foundations</a></p>
+          <p>Building accessible interfaces with semantic HTML</p>
+        </div>
+        <div class="theme-selector">
+          Theme selector
+          <div role="group">
+            <button type="button" class="outline" data-theme-switcher="auto">
+              Auto
+            </button>
+            <button type="button" class="outline" data-theme-switcher="light">
+              Light
+            </button>
+            <button type="button" class="outline" data-theme-switcher="dark">
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container color-selector">
+        <div role="group">
+          <button type="button" class="pico-background-red" data-color-switcher="red"><span class="visually-hidden">Red</span></button>
+          <button type="button" class="pico-background-pink" data-color-switcher="pink"><span class="visually-hidden">Pink</span></button>
+          <button type="button" class="pico-background-fuchsia" data-color-switcher="fuchsia"><span class="visually-hidden">Fuchsia</span></button>
+          <button type="button" class="pico-background-purple" data-color-switcher="purple"><span class="visually-hidden">Purple</span></button>
+          <button type="button" class="pico-background-violet" data-color-switcher="violet"><span class="visually-hidden">Violet</span></button>
+          <button type="button" class="pico-background-indigo" data-color-switcher="indigo"><span class="visually-hidden">Indigo</span></button>
+          <button type="button" class="pico-background-blue" data-color-switcher="blue"><span class="visually-hidden">Blue</span></button>
+          <button type="button" class="pico-background-azure" data-color-switcher="azure"><span class="visually-hidden">Azure</span></button>
+          <button type="button" class="pico-background-cyan" data-color-switcher="cyan"><span class="visually-hidden">Cyan</span></button>
+          <button type="button" class="pico-background-jade" data-color-switcher="jade"><span class="visually-hidden">Jade</span></button>
+          <button type="button" class="pico-background-green" data-color-switcher="green"><span class="visually-hidden">Green</span></button>
+          <button type="button" class="pico-background-lime" data-color-switcher="lime"><span class="visually-hidden">Lime</span></button>
+          <button type="button" class="pico-background-yellow" data-color-switcher="yellow"><span class="visually-hidden">Yellow</span></button>
+          <button type="button" class="pico-background-amber" data-color-switcher="amber"><span class="visually-hidden">Amber</span></button>
+          <button type="button" class="pico-background-pumpkin" data-color-switcher="pumpkin"><span class="visually-hidden">Pumpkin</span></button>
+          <button type="button" class="pico-background-orange" data-color-switcher="orange"><span class="visually-hidden">Orange</span></button>
+          <button type="button" class="pico-background-sand" data-color-switcher="sand"><span class="visually-hidden">Sand</span></button>
+          <button type="button" class="pico-background-grey" data-color-switcher="grey"><span class="visually-hidden">Grey</span></button>
+          <button type="button" class="pico-background-zinc" data-color-switcher="zinc"><span class="visually-hidden">Zinc</span></button>
+          <button type="button" class="pico-background-slate" data-color-switcher="slate"><span class="visually-hidden">Slate</span></button>
+        </div>
+      </div>
+      <div class="container">
+        <button type="button" aria-expanded="true" aria-controls="side-menu" id="menu-toggle">Hide menu</button>
+      </div>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <div class="container flex">
+      <nav class="menu" id="side-menu" aria-hidden="false">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="intro.html">Introduction</a>
+          </li>
+          <li>
+            <a href="unit1.html">Unit 1: Why HTML still matters</a>
+          </li>
+          <li>
+            <a href="unit2.html">Unit 2: Landmarks and page structure</a>
+          </li>
+          <li>
+            <a href="unit3.html">Unit 3: Lists, tables, and relationships</a>
+          </li>
+          <li>
+            <a href="unit4.html" aria-current="page">Unit 4: Links, buttons, and forms</a>
+          </li>
+          <li>
+            <a href="unit5.html">Unit 5: Semantic HTML elements you may not know</a>
+          </li>
+          <li>
+            <a href="unit6.html">Unit 6: POSH in modern frameworks</a>
+          </li>
+          <li>
+            <a href="conclusion.html">Conclusion</a>
+          </li>
+          <li>
+            <a href="bonus.html">Bonus: POSH as a team practice</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="content" tabindex="-1">
+        <!-- Unit 1 -->
+        <section id="unit-2">
+          <h1>Unit 4: Links, buttons and forms</h1>
+
+          <article>
+            <h2>Links vs. buttons</h2>
+            <p>One of the most common accessibility fails.</p>
+            <p>Please, do not code and style a <code>div</code> or a <code>span</code> to look and act like a button or link.</p>
+          </article>
+
+          <article>
+            <h2>Links</h2>
+            <p>Go somewhere - another page, another place on the same page, another view, another component.</p>
+            <h3>Go to another page</h3>
+            <pre class="language-html"><code><!--
+              <a href="/about-us">Learn more about us</a>
+            --></code></pre>
+            <h3>Go to a section on a page</h3>
+            <pre class="language-html"><code><!--
+              <a href="#contact">Go to Contact Section</a>
+            --></code></pre>
+            <h3>Download a file</h3>
+            <pre class="language-html"><code><!--
+              <a href="/downloads/report.pdf" download="CompanyReport2025.pdf">
+            --></code></pre>
+            <h3>Navigate to a new route</h3>
+            <pre class="language-html"><code><!--
+              <a href="/dashboard" onclick="navigateToDashboard(event)">Go to Dashboard</a>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Buttons</h2>
+            <p>Do something - open a modal, submit a form, toggle an accordion, etc.</p>
+            <h3>Regular button</h3>
+            <pre class="language-html"><code><!--
+              <button type="button">Click Me</button>
+            --></code></pre>
+            <h3>Submit button</h3>
+            <pre class="language-html"><code><!--
+              <button type="submit">Subscribe</button>
+            --></code></pre>
+            <h3>Toggle button</h3>
+            <pre class="language-html"><code><!--
+              <button type="button" aria-expanded="false" aria-controls="menu-content" id="menu-button">Menu</button>
+            --></code></pre>
+            <h3>Open a dialog button</h3>
+            <pre class="language-html"><code><!--
+              <button type="button" aria-haspopup="dialog" aria-controls="modal" id="open-modal">Open Details</button>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Icon-only buttons</h2>
+            <h3>Aria label</h3>
+            <pre class="language-html"><code><!--
+            <button type="button" aria-label="Search">
+              <svg aria-hidden="true" focusable="false" ...>
+                ...
+              </svg>
+            </button>
+            --></code></pre>
+            <hr>
+            <h3>Screen-reader only text</h3>
+            <pre class="language-html"><code><!--
+            <button type="button">
+              <svg aria-hidden="true" focusable="false" ...>
+                ...
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Icon-only buttons</h2>
+            <h3>Alt attribute</h3>
+            <pre class="language-html"><code><!--
+            <button type="button">
+              <img src="images/icon.svg" alt="Search">
+            </button>
+            --></code></pre>
+            <hr>
+            <h3>Title</h3>
+            <pre class="language-html"><code><!--
+            <button type="button">
+              <svg role="image" title="Search" ...>
+                ...
+              </svg>
+            </button>
+            OR
+            <button type="button">
+              <svg role="image" ...>
+                <title>Search</title>
+                ...
+              </svg>
+            </button>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Use native elements wherever possible</h2>
+            <p>Native HTML elements come with keyboard support, focus styling, roles, states, and behaviors.</p>
+            <p>Fake elements require you to re-create all of that manually, and often poorly in comparison.</p>
+            <p>Native elements are flexible and can be styled with CSS.</p>
+          </article>
+
+          <article>
+            <h2>How hard is it to fake a button?</h2>
+            <div class="container grid">
+              <div>
+                <h3>HTML</h3>
+                <pre class="language-html"><code><!--
+                  <div
+                    role="button"
+                    tabindex="0"
+                    onclick="handleClick(event)"
+                    onkeydown="handleKeydown(event)"
+                    class="fake-button"
+                  >
+                    Click Me
+                  </div>
+                --></code></pre>
+              </div>
+              <div>
+                <h3>CSS</h3>
+                <pre class="language-css"><code>
+                  .fake-button {
+                    display: inline-block;
+                    padding: 0.5rem 1rem;
+                    background-color: #007BFF;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    text-align: center;
+                    cursor: pointer;
+                    user-select: none;
+                  }
+
+                  .fake-button:focus {
+                    outline: 2px solid #0056b3;
+                    outline-offset: 2px;
+                  }
+
+                  .fake-button:active {
+                    background-color: #0056b3;
+                  }
+
+                </code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <h2>...and you still need the JavaScript</h2>
+            <pre class="language-js"><code>
+              function handleClick(event) {
+                alert('Button clicked!');
+              }
+
+              function handleKeydown(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault(); // Prevent spacebar scrolling
+                  handleClick(event);
+                }
+              }
+            </code></pre>
+          </article>
+
+          <article>
+            <h2>The problems with fake buttons</h2>
+            <ul>
+              <li>You have to manually recreate behaviors that are already included with <code>button</code> elements.</li>
+              <li>It's easy to miss details - keyboard handling, stopping scrolling, etc.</li>
+              <li>Even when done well, behavior can still be inconsistent with different assistive tech.</li>
+              <li>Increasing the accessibility debt on the project every time a new fake button is added.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>Accessible forms have labels</h2>
+            <p>Missing form fields impact users with cognitive disabilities and low vision users, not just screen reader users.</p>
+            <p>Don't use a placeholder as a label substitute.</p>
+            <pre class="language-html"><code><!--
+              Don't use a placeholder instead of a label:
+              <input type="text" name="name" placeholder="Name">
+
+              Don't skip labels altogether
+              <input type="text" name="name">
+
+              Don't incorrectly link labels and form fields
+              <label for="full-name">Name</label>
+              <input type="text" id="name" name="name">
+
+              Don't use aria-label as a substitute for a visible label
+              <input type="text" name="name" aria-label="Name">
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Explicit form label</h2>
+            <p>Label is connected to the form field with a <code>for</code> attribute that references the <code>id</code> attribute of the form field:</p>
+            <pre class="language-html"><code><!--
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name">
+            --></code></pre>
+            <ul>
+              <li>
+                <code>label</code> has a <code>for="name"</code>.
+              </li>
+              <li>
+                <code>input</code> has <code>id="name"</code>.
+              </li>
+              <li>
+                Screen readers announce the label when focusing the input.
+              </li>
+              <li>
+                Great for flexibility - you can place the label anywhere (even before or after the input).
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>Implicit form label</h2>
+            <p>Input is wrapped inside the label element, so no <code>for</code> or <code>id</code> needed.</p>
+            <pre class="language-html"><code><!--
+              <label>
+                Name
+                <input type="text" name="name">
+              </label>
+            --></code></pre>
+            <ul>
+              <li>
+                The input is a child of the label.
+              </li>
+              <li>
+                The browser automatically associates them.
+              </li>
+              <li>
+                Cleaner for small, simple forms (but less flexible for complex layouts).
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>Autocomplete</h2>
+            <ul>
+              <li>Help browsers fill in known values, making forms faster and easier to complete.</li>
+              <li>Can be used on <code>&lt;form&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;input&gt;</code> elements (as long as the <code>input</code> type takes input.</li>
+              <li>Form fields should have an <code>id</code> and/or <code>name</code> attribute, and be a descendant of a <code>&lt;form&gt;</code> with a submit button.</li>
+            </ul>
+
+            <pre class="language-html"><code><!--
+              <label for="given-name">First name</label>
+              <input id="given-name" name="first-name" autocomplete="given-name">
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email">
+            --></code></pre>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete">More details about autocomplete at MDN</a>.</p>
+          </article>
+
+          <article>
+            <h2>Group examples</h2>
+            <hr>
+            <div class="container grid">
+              <div>
+                <h3>Radio buttons</h3>
+                <fieldset>
+                  <legend>Choose your preferred contact method</legend>
+
+                  <label>
+                    <input type="radio" name="contact" value="email">
+                    Email
+                  </label>
+
+                  <label>
+                    <input type="radio" name="contact" value="phone">
+                    Phone
+                  </label>
+
+                  <label>
+                    <input type="radio" name="contact" value="text">
+                    Text Message
+                  </label>
+                </fieldset>
+              </div>
+              <div>
+                <h3>Checkboxes</h3>
+                <fieldset>
+                  <legend>Select your areas of interest</legend>
+
+                  <label>
+                    <input type="checkbox" name="interests" value="technology">
+                    Technology
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="interests" value="design">
+                    Design
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="interests" value="marketing">
+                    Marketing
+                  </label>
+                </fieldset>
+              </div>
+              <div>
+                <h3>Address</h3>
+                <fieldset>
+                  <legend>Mailing Address</legend>
+
+                  <label for="street">Street Address</label>
+                  <input type="text" id="street" name="street" autocomplete="street-address">
+
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" autocomplete="address-level2">
+
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" autocomplete="address-level1">
+
+                  <label for="zip">ZIP Code</label>
+                  <input type="text" id="zip" name="zip" autocomplete="postal-code">
+                </fieldset>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <h2>Radio button fieldset</h2>
+            <pre class="language-html"><code><!--
+              <fieldset>
+                <legend>Choose your preferred contact method</legend>
+
+                <label>
+                  <input type="radio" name="contact" value="email">
+                  Email
+                </label>
+
+                <label>
+                  <input type="radio" name="contact" value="phone">
+                  Phone
+                </label>
+
+                <label>
+                  <input type="radio" name="contact" value="text">
+                  Text Message
+                </label>
+              </fieldset>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Checkbox fieldset</h2>
+            <pre class="language-html"><code><!--
+              <fieldset>
+                <legend>Select your areas of interest</legend>
+
+                <label>
+                  <input type="checkbox" name="interests" value="technology">
+                  Technology
+                </label>
+
+                <label>
+                  <input type="checkbox" name="interests" value="design">
+                  Design
+                </label>
+
+                <label>
+                  <input type="checkbox" name="interests" value="marketing">
+                  Marketing
+                </label>
+              </fieldset>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Address fields</h2>
+            <pre class="language-html"><code><!--
+              <fieldset>
+                <legend>Mailing Address</legend>
+
+                <label for="street">Street Address</label>
+                <input type="text" id="street" name="street" autocomplete="street-address">
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" autocomplete="address-level2">
+
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" autocomplete="address-level1">
+
+                <label for="zip">ZIP Code</label>
+                <input type="text" id="zip" name="zip" autocomplete="postal-code">
+              </fieldset>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Required fields</h2>
+            <ul>
+              <li>Add the <code>required</code> attribute to form fields that are required for submission.</li>
+              <li>Announced by screen readers when focus lands on the input.</li>
+              <li>But...for an improved user experience, you probably want to handle validation with JavaScript.</li>
+            </ul>
+
+            <pre class="language-html"><code><!--
+              <label for="email">Email (required)</label>
+              <input id="email" name="email" type="email" required>
+            --></code></pre>
+
+            <p>Pair with a label that clearly marks the field as required.</p>
+          </article>
+
+          <article>
+            <h2>Instructions and errors</h2>
+            <div class="container grid">
+              <div>
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  aria-describedby="username-help"
+                >
+
+                <p id="username-help">Username must be 6–20 characters and contain only letters and numbers.</p>
+              </div>
+              <div>
+                <pre class="language-html"><code><!--
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    aria-describedby="username-help"
+                  >
+
+                  <p id="username-help">Username must be 6–20 characters and contain only letters and numbers.</p>
+                --></code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <header><h2>Exercise 4: Fix this form</h2></header>
+            <div class="body">
+              <p>
+                <img src="imgs/ex4-1.png" alt="Screenshot of a form that has accessibility issues to fix.">
+              </p>
+              <p>
+                <a href="https://codepen.io/Natalie-MacLees/pen/gbbxEgv">Start</a> |
+                <a href="https://codepen.io/Natalie-MacLees/pen/ByydbRP">Solution</a>
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <h2>Unit 4: Links, buttons and forms</h2>
+            <p>Key takeaways:</p>
+
+            <ol>
+              <li>Use semantic interactive elements.</li>
+              <li>Native HTML means getting your accessibility for free.</li>
+              <li>Use the correct element.</li>
+              <li>Audit forms and buttons on your own sites - they are low-hanging fruit with big impact.</li>
+            </ol>
+          </article>
+        </section>
+      </main>
+    </div>
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >By Natalie MacLees, founder of <a href="https://a20y.com">AAArdvark</a></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+    <script src="js/color-switcher.js"></script>
+    <script src="js/slide-nav.js"></script>
+    <script>
+      let toggle = document.getElementById('menu-toggle');
+      let menu = document.getElementById('side-menu');
+      toggle.addEventListener(
+        "click",
+        (event) => {
+          event.preventDefault();
+          let currentState = toggle.getAttribute('aria-expanded');
+          if (currentState.toLowerCase() == 'true') {
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerText = 'Show menu';
+            menu.style.display = 'none';
+          } else {
+            toggle.setAttribute('aria-expanded', true);
+            toggle.innerText = 'Hide menu';
+            menu.style.display = 'block';
+          }
+        }
+      );
+    </script>
+    <script src="js/prism.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true,
+        'break-lines': 80,
+        'remove-initial-line-feed': true,
+        'tabs-to-spaces': 4
+      });
+    </script>
+  </body>
+</html>

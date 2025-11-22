@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Unit 6: POSH in modern frameworks - POSH Foundations Workshop Materials</title>
+    <meta name="description" content="Workshop materials for the POSH foundations workshop for learning semantic HTML">
+
+    <link rel="stylesheet" href="css/pico.css">
+    <link id="color" rel="stylesheet" href="css/amber.css">
+    <link rel="stylesheet" href="css/pico.posh.css">
+    <link id="syntax" rel="stylesheet" href="css/prism.css">
+  </head>
+
+  <body class="line-numbers">
+    <a href="#content" class="skip-to-content contrast button">Skip to content</a>
+    <!-- Header -->
+    <header>
+      <div class="container grid">
+        <div>
+          <p class="site-title"><a href="index.html">POSH Foundations</a></p>
+          <p>Building accessible interfaces with semantic HTML</p>
+        </div>
+        <div class="theme-selector">
+          Theme selector
+          <div role="group">
+            <button type="button" class="outline" data-theme-switcher="auto">
+              Auto
+            </button>
+            <button type="button" class="outline" data-theme-switcher="light">
+              Light
+            </button>
+            <button type="button" class="outline" data-theme-switcher="dark">
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container color-selector">
+        <div role="group">
+          <button type="button" class="pico-background-red" data-color-switcher="red"><span class="visually-hidden">Red</span></button>
+          <button type="button" class="pico-background-pink" data-color-switcher="pink"><span class="visually-hidden">Pink</span></button>
+          <button type="button" class="pico-background-fuchsia" data-color-switcher="fuchsia"><span class="visually-hidden">Fuchsia</span></button>
+          <button type="button" class="pico-background-purple" data-color-switcher="purple"><span class="visually-hidden">Purple</span></button>
+          <button type="button" class="pico-background-violet" data-color-switcher="violet"><span class="visually-hidden">Violet</span></button>
+          <button type="button" class="pico-background-indigo" data-color-switcher="indigo"><span class="visually-hidden">Indigo</span></button>
+          <button type="button" class="pico-background-blue" data-color-switcher="blue"><span class="visually-hidden">Blue</span></button>
+          <button type="button" class="pico-background-azure" data-color-switcher="azure"><span class="visually-hidden">Azure</span></button>
+          <button type="button" class="pico-background-cyan" data-color-switcher="cyan"><span class="visually-hidden">Cyan</span></button>
+          <button type="button" class="pico-background-jade" data-color-switcher="jade"><span class="visually-hidden">Jade</span></button>
+          <button type="button" class="pico-background-green" data-color-switcher="green"><span class="visually-hidden">Green</span></button>
+          <button type="button" class="pico-background-lime" data-color-switcher="lime"><span class="visually-hidden">Lime</span></button>
+          <button type="button" class="pico-background-yellow" data-color-switcher="yellow"><span class="visually-hidden">Yellow</span></button>
+          <button type="button" class="pico-background-amber" data-color-switcher="amber"><span class="visually-hidden">Amber</span></button>
+          <button type="button" class="pico-background-pumpkin" data-color-switcher="pumpkin"><span class="visually-hidden">Pumpkin</span></button>
+          <button type="button" class="pico-background-orange" data-color-switcher="orange"><span class="visually-hidden">Orange</span></button>
+          <button type="button" class="pico-background-sand" data-color-switcher="sand"><span class="visually-hidden">Sand</span></button>
+          <button type="button" class="pico-background-grey" data-color-switcher="grey"><span class="visually-hidden">Grey</span></button>
+          <button type="button" class="pico-background-zinc" data-color-switcher="zinc"><span class="visually-hidden">Zinc</span></button>
+          <button type="button" class="pico-background-slate" data-color-switcher="slate"><span class="visually-hidden">Slate</span></button>
+        </div>
+      </div>
+      <div class="container">
+        <button type="button" aria-expanded="true" aria-controls="side-menu" id="menu-toggle">Hide menu</button>
+      </div>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <div class="container flex">
+      <nav class="menu" id="side-menu" aria-hidden="false">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="intro.html">Introduction</a>
+          </li>
+          <li>
+            <a href="unit1.html">Unit 1: Why HTML still matters</a>
+          </li>
+          <li>
+            <a href="unit2.html">Unit 2: Landmarks and page structure</a>
+          </li>
+          <li>
+            <a href="unit3.html">Unit 3: Lists, tables, and relationships</a>
+          </li>
+          <li>
+            <a href="unit4.html">Unit 4: Links, buttons, and forms</a>
+          </li>
+          <li>
+            <a href="unit5.html">Unit 5: Semantic HTML elements you may not know</a>
+          </li>
+          <li>
+            <a href="unit6.html" aria-current="page">Unit 6: POSH in modern frameworks</a>
+          </li>
+          <li>
+            <a href="conclusion.html">Conclusion</a>
+          </li>
+          <li>
+            <a href="bonus.html">Bonus: POSH as a team practice</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="content" tabindex="-1">
+        <!-- Unit 1 -->
+        <section id="unit-2">
+          <h1>Unit 6: POSH in modern frameworks</h1>
+
+          <article>
+            <h2>Semantic HTML still matters</h2>
+            <p>You don't get to skip semantics.</p>
+            <p>Your app still renders to the DOM, and HTML is still the foundation.</p>
+            <p>Frameworks are helpers, not substitutes for web standards.</p>
+          </article>
+
+          <article>
+            <h2>JSX</h2>
+            <p>JSX lets you write <code>div</code> soup quickly.</p>
+            <p>This is a cultural problem, not a technical one. It's easy to fall into the trap.</p>
+            <p>Don't omit semantics in MVPs.</p>
+            <p>Don't copy non-semantic components.</p>
+            <p>Don't prioritize speed or styling.</p>
+          </article>
+
+          <article>
+            <h2>Semantic JSX</h2>
+            <p>Takes intention and careful planning, just as it does if you're writing HTML directly.</p>
+          </article>
+
+          <article>
+            <h2>Patterns to watch out for</h2>
+            <ol>
+              <li>Components without structure.</li>
+              <li>Accessibility afterthoughts.</li>
+              <li>Link and button mixups.</li>
+            </ol>
+          </article>
+
+          <article>
+            <h2>Reusable components can be your best friend...<br>
+            ...or your worst enemy</h2>
+            <p>If you build reusable components with care, you get accessibility everywhere with little effort.</p>
+            <p>On the other hand, if your components aren't accessible, you can't build an accessible app. Mistakes multiply.</p>
+          </article>
+
+          <article>
+            <h2>What helps</h2>
+            <ol>
+              <li>Accessibility linters/checkers in the CI pipeline.</li>
+              <li>Run accessibility checks in your browser.</li>
+              <li>Test your markup manually before committing.</li>
+            </ol>
+          </article>
+
+          <article>
+            <h2>Wrap form elements in a <code>form</code></h2>
+            <pre class="language-js"><code><!--
+              <template>
+                <form @submit.prevent="submitForm">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" v-model="formData.name" autocomplete="name">
+                  <button type="submit">Submit</button>
+                </form>
+              </template>
+            --></code></pre>
+
+            <p>Note: This can mean wrapping your entire app in a <code>form</code> sometimes.</p>
+            <p>Allow your form fields to work as expected with assistive technology by triggering forms mode and autocomplete.</p>
+          </article>
+
+          <article>
+            <h2>Apply all the same rules in JSX as HTML:</h2>
+            <ul>
+              <li>Ensure form fields have labels.</li>
+              <li>Use fieldsets and legends around field groups.</li>
+              <li>Use buttons and links correctly.</li>
+              <li>Avoid interactive <code>&lt;div&gt;</code>s and <code>&lt;span&gt;</code>s.</li>
+              <li>Add alternative text for non-text elements.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>Accessible React button</h2>
+            <pre class="language-js"><code><!--
+              function SaveButton() {
+                return (
+                  <button type="button" onClick={() => alert('Saved!')}>
+                    Save
+                  </button>
+                );
+              }
+            --></code></pre>
+            <p>React’s JSX compiles this correctly into a real <code>&lt;button&gt;</code>.</p>
+            <p>No <code>div onClick</code> nonsense.</p>
+          </article>
+
+          <article>
+            <h2>Accessible Vue links</h2>
+            <pre class="language-js"><code><!--
+              <template>
+                <a href="/about-us">Learn More</a>
+              </template>
+
+              <script>
+              export default {
+                name: "AboutLink",
+              };
+              </script>
+            --></code></pre>
+            <h3>With Router:</h3>
+            <pre class="language-js"><code><!--
+              <template>
+                <router-link to="/about-us">Learn More</router-link>
+              </template>
+            --></code></pre>
+            <p><code>&lt;router-link&gt;</code> renders an <code>&lt;a&gt;</code>.</p>
+          </article>
+
+          <article>
+            <h2>Accessible React Toggle button</h2>
+            <pre class="language-js"><code><!--
+              import { useState } from 'react';
+
+              function MenuToggle() {
+                const [expanded, setExpanded] = useState(false);
+
+                return (
+                  <>
+                    <button
+                      type="button"
+                      aria-expanded={expanded}
+                      aria-controls="menu"
+                      onClick={() => setExpanded(prev => !prev)}
+                    >
+                      Menu
+                    </button>
+
+                    {expanded && (
+                      <nav id="menu" aria-label="Main Navigation">
+                        <ul>
+                          <li><a href="/home">Home</a></li>
+                          <li><a href="/about">About</a></li>
+                          <li><a href="/services">Services</a></li>
+                          <li><a href="/contact">Contact</a></li>
+                        </ul>
+                      </nav>
+                    )}
+                  </>
+                );
+              }
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Accessible Svelte email form</h2>
+            <pre class="language-js"><code><!--
+              <script>
+                let email = '';
+                let hasError = false;
+              </script>
+
+              <form on:submit|preventDefault={() => {
+                hasError = email.trim() === '';
+              }}>
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  bind:value={email}
+                  aria-describedby="email-help {hasError ? 'email-error' : ''}"
+                  aria-invalid={hasError}
+                >
+
+                <p id="email-help">We'll never share your email address.</p>
+
+                {#if hasError}
+                  <p id="email-error" style="color: red;">Email is required.</p>
+                {/if}
+
+                <button type="submit">Submit</button>
+              </form>
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>Accessible React Modal</h2>
+            <pre class="language-js"><code><!--
+              import { useRef } from 'react';
+
+              function Modal({ isOpen, onClose }) {
+                const dialogRef = useRef(null);
+
+                // Open the dialog when `isOpen` becomes true
+                if (isOpen && dialogRef.current && !dialogRef.current.open) {
+                  dialogRef.current.showModal();
+                }
+
+                return (
+                  <dialog ref={dialogRef} onClose={onClose} aria-labelledby="modal-title">
+                    <h2 id="modal-title">Modal Title</h2>
+                    <p>Some content here...</p>
+                    <form method="dialog">
+                      <button>Close</button>
+                    </form>
+                  </dialog>
+                );
+              }
+            --></code></pre>
+          </article>
+
+          <article>
+            <h2>If HTML gives you a tool that already does accessibility well, use it!</h2>
+          </article>
+
+          <article>
+            <header><h2>Exercise 5: Refactor this component</h2></header>
+            <div class="body">
+              <ol>
+                <li>
+                  <p><strong>React:</strong> Fix this button component.</p>
+                  <p>
+                    <a href="https://codepen.io/Natalie-MacLees/pen/RNNZdXY">Start</a> |
+                    <a href="https://codepen.io/Natalie-MacLees/pen/YPPxoMa">Solution</a>
+                  </p>
+                </li>
+                <li>
+                  <p><strong>Vue:</strong> Fix this button.</p>
+                  <p>
+                    <a href="https://codepen.io/Natalie-MacLees/pen/ZYYJgzO">Start</a> |
+                    <a href="https://codepen.io/Natalie-MacLees/pen/OPPjKJq">Solution</a>
+                  </p>
+                </li>
+                <li>
+                  <p><strong>React:</strong> Fix this login form.</p>
+                  <p>
+                    <a href="https://codepen.io/Natalie-MacLees/pen/vEEJoOz">Start</a> |
+                    <a href="https://codepen.io/Natalie-MacLees/pen/MYYvNae">Solution</a>
+                  </p>
+                </li>
+                <li>
+                  <p><strong>Vue:</strong> Fix this toggle.</p>
+                  <p>
+                    <a href="https://codepen.io/Natalie-MacLees/pen/QwwMeKb">Start</a> |
+                    <a href="https://codepen.io/Natalie-MacLees/pen/vEEJoXV">Solution</a>
+                  </p>
+                </li>
+                <li>
+                  <p><strong>React:</strong> Fix this modal (Warning: Gets a bit complicated).</p>
+                  <p>
+                    <a href="https://codepen.io/Natalie-MacLees/pen/myyMNRv">Start</a> |
+                    <a href="https://codepen.io/Natalie-MacLees/pen/bNNrXoN">Solution</a>
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </article>
+
+          <article>
+            <h2>Unit 5: POSH in modern frameworks</h2>
+            <p>Key takeaways:</p>
+
+            <ol>
+              <li>Frameworks are no excuse.</li>
+              <li>Build (and use) semantic components.</li>
+              <li>Be thoughtful and intentional with the markup you choose.</li>
+              <li>Small improvements compound over time, especially in reusable components.</li>
+            </ol>
+          </article>
+        </section>
+      </main>
+    </div>
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >By Natalie MacLees, founder of <a href="https://a20y.com">AAArdvark</a></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+    <script src="js/color-switcher.js"></script>
+    <script src="js/slide-nav.js"></script>
+    <script>
+      let toggle = document.getElementById('menu-toggle');
+      let menu = document.getElementById('side-menu');
+      toggle.addEventListener(
+        "click",
+        (event) => {
+          event.preventDefault();
+          let currentState = toggle.getAttribute('aria-expanded');
+          if (currentState.toLowerCase() == 'true') {
+            toggle.setAttribute('aria-expanded', false);
+            toggle.innerText = 'Show menu';
+            menu.style.display = 'none';
+          } else {
+            toggle.setAttribute('aria-expanded', true);
+            toggle.innerText = 'Hide menu';
+            menu.style.display = 'block';
+          }
+        }
+      );
+    </script>
+    <script src="js/prism.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true,
+        'break-lines': 80,
+        'remove-initial-line-feed': true,
+        'tabs-to-spaces': 4
+      });
+    </script>
+  </body>
+</html>
